@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ex5</title>
+<style>    
+body{
+    margin:0
+}
+.nav {
+    overflow: hidden;
+    background-color:#2E8B57;
+}
+
+.nav a {
+	float:left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #111;
+}
+
+.dropdown {
+	float:right;
+	overflow:hidden;
+}
+
+.dropdown .dropbtn {
+    background-color: #2E8B57;
+	margin:0;
+    color: white;
+    padding: 14px 17px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+	min-width:140px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+.side ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+ 
+.side li a {
+    display: block;
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.side {
+	position:fixed;
+	height:1000px;
+	background-color:#8FBC8F;
+	width:50px;
+	transition:width 1s;
+}
+
+.side:hover {
+	width:150px;
+}
+ 
+.side li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="nav">
+	<a href="#home">Home</a>
+    <a href="#news">Sotre</a>
+    <a href="#contact">Community</a>
+	<div class="dropdown">
+		<button class="dropbtn">Articles</button>
+		<div class="dropdown-content">
+			<a href="#">Training</a>
+			<a href="#">Workout</a>
+			<a href="#">Nutrition</a>			
+		</div>
+	</div>
+
+</div>
+
+
+
+<div class=side>
+<ul>
+	<li><a href="#home">News</a></li>
+	<li><a href="#news">Plan</a></li>
+	<li><a href="#contact">Food</a></li>
+	<li><a href="#contact">Q&A</a></li>
+</ul>
+	
+	</div>
+
+</body>
+</html>
