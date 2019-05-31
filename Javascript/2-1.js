@@ -2,7 +2,7 @@
 a=1;
 sum=1;
 while (a<=10){
-    sum = sum*a;
+    sum=sum*a;
     a=a+1;
 }
 console.log("ans=",sum);
