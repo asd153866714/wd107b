@@ -7,4 +7,4 @@
 教師 | 陳鍾誠
 學校 | 金門大學
 科系 | 建築學系
-我的專案 | 說明 [myproject.md][myproject.md]
+我的專案 | 說明 (myproject.md)
