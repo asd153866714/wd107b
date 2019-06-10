@@ -6,4 +6,3 @@
 
 ## 2.簡易計算機
 連結: [calculator](calculator)
-[calculator](calculator)
