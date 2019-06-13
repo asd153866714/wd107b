@@ -1,6 +1,6 @@
 # 簡易計算機
 
-線上使用 : https://asd153866714.github.io/wd107b/calcaulator/calculator.html
+線上使用 : https://asd153866714.github.io/wd107b/calculator/calculator.html
 
 ## 功能
 
