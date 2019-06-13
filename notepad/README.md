@@ -1,6 +1,6 @@
 # 記事本
 
-線上使用 : 
+線上使用 : https://asd153866714.github.io/wd107b/notepad/notepad.html
 
 ## 功能
 
