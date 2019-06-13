@@ -4,9 +4,8 @@
 
 ## 功能
 
-1.將輸入的標題和內容儲存
-
-2.網頁關閉再開啟後內容不會遺失
+1. 將輸入的標題和內容儲存
+2. 網頁關閉再開啟後內容不會遺失
 
 ## 技術手段
 
@@ -27,15 +26,13 @@ function save() {
 然後使用 showList() 函數
 
 
-function showList() {
-  var rowHtml = "";
-  for (var title in window.localStorage) {
-    if (title.startsWith("notepad:")) {
-      rowHtml += "<tr><td><a onclick=\"loadDoc('"+title+"')\">"+title.substring(8)+"</a></td></tr>"
-    }
+  function save() {
+    var title = oTitle.value;
+    var text  = oText.value;
+    window.localStorage.setItem("notepad:"+title, text);
+    showList();
   }
-  oList.innerHTML = rowHtml;
-}
+
 先指派一個空字串 rowHtml 
 用 for...in 迴圈取出 localstorage 裡的每個項目
 在開頭為 "notepad" 的情況下，以 table 的形式將內容加上 rowHtml 這個空字串，並讓每條內容被滑鼠點擊時觸發 loadDoc() 函數
