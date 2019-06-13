@@ -20,8 +20,7 @@
       showList();
     }
 
-
-將 標題 和 本文 的內容指派給 title 和 text 這兩個變數
+使用 save() 將 標題 和 本文 的內容指派給 title 和 text 這兩個變數
 
 利用 window.localStorage.setItem("notepad:"+title, text);  以 (key,value) 的形式將內容儲存到 localstorage
 然後使用 showList() 函數
