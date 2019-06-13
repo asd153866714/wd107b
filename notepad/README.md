@@ -13,12 +13,13 @@
 
 輸入標題和內容之後，按下"Save"
 
-function save() {
-  var title = oTitle.value;
-  var text  = oText.value;
-  window.localStorage.setItem("notepad:"+title, text);
-  showList();
-}
+    function save() {
+      var title = oTitle.value;
+      var text  = oText.value;
+      window.localStorage.setItem("notepad:"+title, text);
+      showList();
+    }
+
 
 將 標題 和 本文 的內容指派給 title 和 text 這兩個變數
 
@@ -26,12 +27,12 @@ function save() {
 然後使用 showList() 函數
 
 
-  function save() {
-    var title = oTitle.value;
-    var text  = oText.value;
-    window.localStorage.setItem("notepad:"+title, text);
-    showList();
-  }
+    function save() {
+      var title = oTitle.value;
+      var text  = oText.value;
+      window.localStorage.setItem("notepad:"+title, text);
+      showList();
+    }
 
 先指派一個空字串 rowHtml 
 用 for...in 迴圈取出 localstorage 裡的每個項目
@@ -39,9 +40,9 @@ function save() {
 使用 oList.innerHTML = rowHtml 將每條標題顯示在下方的 table 中
 
 
-function loadDoc(title) {
-  oTitle.value = title.substring(8);
-  oText.value  = window.localStorage.getItem(title);
-}
+    function loadDoc(title) {
+      oTitle.value = title.substring(8);
+      oText.value  = window.localStorage.getItem(title);
+    }
 
 loadDoc() 函數被觸發後會將儲存的標題和本文顯示在上方的欄位中
