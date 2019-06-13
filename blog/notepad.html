@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body{
+    background-color: grey;
+  }
+  .title{
+    width:70%;
+    height: 25px;    
+  }
+  .text{
+    width:70%;
+    height:400px ;
+  }
+
+  a { 
+    color:blue; 
+    text-decoration:underline; }
+</style>
+</head>
+<body onload="showList()">
+<div>
+<div><input class="title" id="title" type="text" value="Title"/></div>
+<br/>
+<div><textarea class="text" id="text">Text</textarea></div>
+<button onclick="save()">Save</button>
+
+<div>
+<table id="list">
+</table>
+</div>
+
+<script>
+var oTitle = document.getElementById("title");
+var oText  = document.getElementById("text");
+var oList = document.getElementById("list");
+
+function save() {
+  var title = oTitle.value;
+  var text  = oText.value;
+  window.localStorage.setItem("notepad:"+title, text);
+  showList();
+}
+
+function showList() {
+  var rowHtml = "";
+  for (var title in window.localStorage) {
+    if (title.startsWith("notepad:")) {
+      rowHtml += "<tr><td><a onclick=\"loadDoc('"+title+"')\">"+title.substring(8)+"</a></td></tr>"
+    }
+  }
+  oList.innerHTML = rowHtml;
+}
+
+function loadDoc(title) {
+  oTitle.value = title.substring(8);
+  oText.value  = window.localStorage.getItem(title);
+}
+
+</script>
+
+</div>
+</body>
+</html>
