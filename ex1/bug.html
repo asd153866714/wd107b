@@ -1,0 +1,66 @@
+<HTML>
+    <HEAD>
+    <TITLE>灌水小程式</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+    var ct = 0;
+    var tot = 0;
+    var tot2 = 20000;
+    var wID = null;
+    var strurl1 = "";
+    var strurl2 = "";
+    
+       function openwindow()
+      {
+             wID = window.open("http://tw.yahoo.com/");
+      }
+    
+      function counter()
+      {
+            if (ct == 0)
+                       wID.location.href = strurl1;
+               
+           if (ct == 1)
+                      wID.location.href = strurl2;
+             
+           ct++;
+           tot++;
+           F1.T3.value = tot;
+           if (ct > 1) ct=0;
+           if (tot == tot2) clearTimeout(tID);
+           tID = setTimeout("counter()",3000);
+      }
+    
+      function take()
+      {
+          strurl1 = F1.T1.value;
+          strurl2 = F1.T2.value;
+      }
+     
+      function check()
+      {
+          if (F1.T1.value =="" || F1.T2.value =="")
+          {
+              if (F1.T1.value == "")   F1.T1.value = "請輸入網址";
+              if (F1.T2.value == "")   F1.T2.value = "請輸入網址";
+          }
+          else
+          { take(); openwindow();   counter(); }
+      }
+    </SCRIPT>
+    </HEAD>
+    
+    <BODY>
+    <font size=6 color=red><strong>灌水小程式</strong></font>
+    <hr size=3 color=green><br>
+    <form name="F1">
+    網址一 : <br>
+    <input type="text" name="T1" value=""> <input type="button" value="清除網址" onclick="F1.T1.value='';"> <br>
+    網址二 : <br>
+    <input type="text" name="T2" value=""> <input type="button" value="清除網址" onclick="F1.T2.value='';"> <br>
+    已灌水次數 :
+    <input type="text" name="T3" value=""> <br>
+    <input type="button" value="開始灌水" onclick="check()">
+    <input type="button" value="停止" onclick="clearTimeout(tID);">
+    </form>
+    </BODY>
+    </HTML>
