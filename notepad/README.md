@@ -27,15 +27,15 @@
 然後使用 showList() 函數
 
 
-  function showList() {
-    var rowHtml = "";
-    for (var title in window.localStorage) {
-      if (title.startsWith("notepad:")) {
-        rowHtml += "<tr><td><a onclick=\"loadDoc('"+title+"')\">"+title.substring(8)+"</a></td></tr>"
+    function showList() {
+      var rowHtml = "";
+      for (var title in window.localStorage) {
+        if (title.startsWith("notepad:")) {
+          rowHtml += "<tr><td><a onclick=\"loadDoc('"+title+"')\">"+title.substring(8)+"</a></td></tr>"
+        }
       }
+      oList.innerHTML = rowHtml;
     }
-    oList.innerHTML = rowHtml;
-  }
 
 先指派一個空字串 rowHtml 
 
