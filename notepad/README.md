@@ -23,6 +23,7 @@
 使用 save() 將 標題 和 本文 的內容指派給 title 和 text 這兩個變數
 
 利用 window.localStorage.setItem("notepad:"+title, text);  以 (key,value) 的形式將內容儲存到 localstorage
+
 然後使用 showList() 函數
 
 
@@ -34,8 +35,11 @@
     }
 
 先指派一個空字串 rowHtml 
+
 用 for...in 迴圈取出 localstorage 裡的每個項目
+
 在開頭為 "notepad" 的情況下，以 table 的形式將內容加上 rowHtml 這個空字串，並讓每條內容被滑鼠點擊時觸發 loadDoc() 函數
+
 使用 oList.innerHTML = rowHtml 將每條標題顯示在下方的 table 中
 
 
