@@ -89,8 +89,8 @@
 
     function touchHandler(){
         var relativeX = e.clientX - canvas.offsetLeft;
-        if(relativeX > 0 && relativeX < canvas.width) {
-            paddleX = relativeX - paddleWidth/2;
+        if(e.touches) {
+            paddleX = e.touches.relativeX;
         }
     }
 
